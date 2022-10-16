@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        MainPage
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!--Firebase-->
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-storage.js"></script>
+        
+    </head>
+        <body class="h-100"  style="background-image: url('annyong.jpg');background-size: cover;">
+               
+           
+            <nav class="navbar navbar-expand-lg bg-dark text-white">
+
+             <div class="container-fluid">
+                 <ul class="nav navbar-nav">
+                     <li class="active">
+                        <img src='Blog.png'style="width:200px;height:200px;">
+                         <a class="navbar-brand" style="color:whitesmoke;text-decoration-style:wavy; font-size: 50px;" href="#">
+                        BLOG ADDA
+                        </a>
+                     </li>
+                     <li>
+                       
+                         <a class="nav-link" style="color:whitesmoke;text-decoration-style:wavy;" onclick="switchView('home.html')">
+                    <spam style="color: white;">HOME</spam>
+                
+                        </a>
+                        </li>
+                     <li>
+                       
+                        <a class="nav-link" style="color:whitesmoke;text-decoration-style:wavy;" onclick="switchView('myblogs.html')">
+                            <spam style="color: white;">MY BLOGS</spam>
+                       </a>
+                    </li>
+                 </ul>
+
+            <div class="dropdown navbar-right">
+              <button id="option-id" class="btn btn-light dropdown-toggle bg-dark text-white"
+              type="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              > 
+                  OPTIONS
+              </button>
+              <div class="dropdown-menu"
+              aria-labelledby="option-id"
+              >
+            <a class="dropdown-item" id="btn-logout" href="#">
+                LOGOUT
+            </a>
+            </div>
+            </div>
+             </div>   
+            </nav>
+
+
+    <div class="row h-100 bg-light">
+
+        <div class="col-lg-0 bg-secondary" >
+            <ul class=" nav flex-column"></ul>
+        </div>
+        <div class="col-lg-12"  style="background-image: url('annyong.jpg');background-size: cover;">
+            <div class="container" id="container">
+                <h1 style="font-family:'Times New Roman', Times, serif;color:black;">HI THIS IS BLOG ADDA...HERE YOU CAN ADD ANY POST ON ANY TOPIC YOU LIKE AND IT IS TOTALLY FREE!!JUST CLICK ON THE HOME BUTTON ABOVE AND SEE POSTS FROM DIFFERENT PEOPLE ALL OVER THE WORLD AND ALSO TELL THEM WHAT'S IN YOUR MIND..SO WHAT ARE YOU WAITING FOR??</h1>
+                
+                
+</div>
+</div>
+</div>
+
+            <script src="js/index.js"></script>
+<script>
+    firebase.auth().onAuthStateChanged(function(user){
+        if(!user){
+            window.location.href="index.html";
+        }
+    })
+</script>
+
+        </body>
+    
+</html>
